@@ -1,11 +1,10 @@
 import { AfterViewInit, Directive, Input, OnChanges, OnDestroy } from "@angular/core";
 import { AbstractControl, FormGroupDirective } from "@angular/forms";
 
-import { BehaviorSubject } from "rxjs-compat/BehaviorSubject";
-
 import { ErrorDetails, ErrorOptions } from "./ngxerrors";
 
 import { toArray } from "./utils/toArray";
+import { BehaviorSubject } from "rxjs/internal/BehaviorSubject";
 
 @Directive({
   selector: "[ngxErrors]",

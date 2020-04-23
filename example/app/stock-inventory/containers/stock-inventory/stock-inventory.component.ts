@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, AbstractControl } from '@angular/forms';
 
 import { StockValidators } from './stock-inventory.validators';
-
-import { Observable } from 'rxjs';
-import 'rxjs/add/observable/forkJoin';
-import 'rxjs/add/operator/map';
-
 import { StockInventoryService } from '../../services/stock-inventory.service';
 
 import { Product, Item } from '../../models/product.interface';
+import { map } from 'rxjs/operators';
+import { forkJoin } from 'rxjs/internal/observable/forkJoin';
 
 @Component({
   selector: 'stock-inventory',
@@ -82,8 +79,7 @@ export class StockInventoryComponent implements OnInit {
     const cart = this.stockService.getCartItems();
     const products = this.stockService.getProducts();
 
-    Observable
-      .forkJoin(cart, products)
+    forkJoin(cart, products)
       .subscribe(([cart, products]: [Item[], Product[]]) => {
 
         const myMap = products
@@ -103,8 +99,9 @@ export class StockInventoryComponent implements OnInit {
 
   validateBranch(control: AbstractControl) {
     return this.stockService
-      .checkBranchId(control.value)
-      .map((response: boolean) => response ? null : { unknownBranch: true });
+      .checkBranchId(control.value).pipe(
+        map((response: boolean) => response ? null : { unknownBranch: true })
+      );
   }
 
   calculateTotal(value: Item[]) {
