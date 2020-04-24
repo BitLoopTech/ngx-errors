@@ -1,6 +1,6 @@
 {
   "name": "ngx-errors-complete",
-  "version": "4.2.0",
+  "version": "4.2.2",
   "description": "A declarative validation module for reactive forms",
   "author": "Ultimate Angular",
   "license": "MIT",
