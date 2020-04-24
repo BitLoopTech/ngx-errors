@@ -1,6 +1,6 @@
 {
   "name": "ngx-errors-complete",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "description": "A declarative validation module for reactive forms",
   "author": "Ultimate Angular",
   "license": "MIT",
@@ -19,7 +19,8 @@
     "rollup": "rollup -c rollup.config.js >/dev/null 2>&1",
     "ngc": "ngc -p tsconfig.json",
     "test": "karma start --single-run",
-    "test:watch": "karma start"
+    "test:watch": "karma start",
+    "prepublish": "yarn run test && yarn run build"
   },
   "devDependencies": {
     "@angular/compiler": "6.0.9",
@@ -65,5 +66,6 @@
     "rxjs": "6.3.3",
     "tslib": "1.6.1",
     "zone.js": "0.8.9"
-  }
+  },
+  "files": ["dist"]
 }
