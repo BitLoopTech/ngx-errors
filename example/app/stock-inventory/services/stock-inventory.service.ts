@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, URLSearchParams } from '@angular/http';
 
 import { Observable, of } from 'rxjs';
 
@@ -7,9 +6,7 @@ import { Product, Item } from '../models/product.interface';
 
 @Injectable()
 export class StockInventoryService {
-  constructor(
-    private http: Http
-  ) {}
+  constructor() {}
 
   getCartItems(): Observable<Item[]> {
     return of([ 
