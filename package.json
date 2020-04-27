@@ -56,8 +56,8 @@
   "dependencies": {
     "@angular/animations": "6.0.9",
     "@angular/common": "6.0.9",
-    "@angular/core": "6.0.9",
-    "@angular/cli": "6.1.0",
+    "@angular/core": "7.2.16",
+    "@angular/cli": "7.3.10",
     "@angular/forms": "6.0.9",
     "@angular/platform-browser": "6.0.9",
     "@angular/platform-browser-dynamic": "6.0.9",
@@ -66,5 +66,7 @@
     "reflect-metadata": "0.1.10",
     "tslib": "1.6.1"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
