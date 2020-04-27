@@ -50,7 +50,8 @@
     "typescript": "2.7.2",
     "webpack": "2.4.1",
     "webpack-dev-server": "2.4.5",
-    "zone.js": "0.8.9"
+    "zone.js": "0.8.26",
+    "tslint": "^5.0.0"
   },
   "dependencies": {
     "@angular/animations": "6.0.9",
@@ -58,6 +59,7 @@
     "@angular/core": "6.0.9",
     "@angular/cli": "6.1.0",
     "@angular/forms": "6.0.9",
+    "@angular/http": "6.0.9",
     "@angular/platform-browser": "6.0.9",
     "@angular/platform-browser-dynamic": "6.0.9",
     "@angular/router": "6.0.9",
