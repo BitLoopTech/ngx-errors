@@ -7,10 +7,6 @@ const plugins = [
     'process.env': {
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }
-  }),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    minChunks: (module) => module.context && /node_modules/.test(module.context)
   })
 ];
 
