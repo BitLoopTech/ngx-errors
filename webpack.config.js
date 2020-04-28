@@ -1,13 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 const typescript = require('typescript');
+const helpers = require('./helpers');
 
 const plugins = [
   new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }
-  })
+  }),
+  // Workaround for Critical dependency 
+    // The request of a dependency is an expression in ./node_modules/@angular/core/fesm5/core.js
+  new webpack.ContextReplacementPlugin(
+    /\@angular(\\|\/)core(\\|\/)fesm5/,
+    helpers.root('./src'),
+    {}
+)
 ];
 
 if (process.env.NODE_ENV === 'production') {
