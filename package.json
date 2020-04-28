@@ -23,13 +23,13 @@
     "prepublish": "yarn run test && yarn run build"
   },
   "devDependencies": {
-    "@angular/compiler": "7.2.15",
-    "@angular/compiler-cli": "7.2.15",
+    "@angular/compiler": "8.2.14",
+    "@angular/compiler-cli": "8.2.14",
     "@types/jasmine": "2.5.46",
     "@types/karma": "0.13.34",
     "@types/node": "^7.0.12",
     "angular2-template-loader": "0.6.2",
-    "awesome-typescript-loader": "3.1.2",
+    "awesome-typescript-loader": "5.2.1",
     "file-loader": "0.11.1",
     "html-loader": "0.4.5",
     "jasmine-core": "2.5.2",
@@ -44,29 +44,26 @@
     "raw-loader": "0.5.1",
     "rimraf": "2.6.1",
     "rollup": "0.41.6",
-    "rxjs": "6.3.3",
+    "rxjs": "6.5.5",
     "rxjs-tslint": "^0.1.8",
     "sass-loader": "6.0.3",
-    "typescript": "3.1.1",
-    "webpack": "2.4.1",
-    "webpack-dev-server": "2.4.5",
-    "zone.js": "0.8.26",
+    "typescript": "3.5.3",
+    "webpack": "4.43.0",
+    "webpack-dev-server": "3.10.3",
+    "zone.js": "0.9.1",
     "tslint": "^5.0.0"
   },
   "dependencies": {
-    "@angular/animations": "7.2.15",
-    "@angular/common": "7.2.15",
-    "@angular/core": "7.2.16",
-    "@angular/cli": "7.3.10",
-    "@angular/forms": "7.2.15",
-    "@angular/platform-browser": "7.2.15",
-    "@angular/platform-browser-dynamic": "7.2.15",
-    "@angular/router": "7.2.15",
-    "core-js": "2.4.1",
+    "@angular/animations": "8.2.14",
+    "@angular/common": "8.2.14",
+    "@angular/core": "8.2.14",
+    "@angular/cli": "8.3.26",
+    "@angular/forms": "8.2.14",
+    "@angular/platform-browser": "8.2.14",
+    "@angular/platform-browser-dynamic": "8.2.14",
+    "@angular/router": "8.2.14",
+    "core-js": "3.6.5",
     "reflect-metadata": "0.1.10",
     "tslib": "1.6.1"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
