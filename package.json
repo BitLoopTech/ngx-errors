@@ -19,8 +19,7 @@
     "rollup": "rollup -c rollup.config.js > NUL 2>&1",
     "ngc": "ngc -p tsconfig.json",
     "test": "karma start --single-run",
-    "test:watch": "karma start",
-    "prepublish": "yarn run test && yarn run build"
+    "test:watch": "karma start"
   },
   "devDependencies": {
     "@angular/compiler": "9.1.3",
