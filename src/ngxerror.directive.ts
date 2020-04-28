@@ -45,7 +45,7 @@ export class NgxErrorDirective implements OnInit, OnDestroy, DoCheck {
     this.states = this._states.asObservable().pipe(distinctUntilChanged());
 
     const errors = this.ngxErrors.subject
-    .pipe(filter(Boolean))
+    .pipe(filter((obj) => !!obj))
       .pipe(filter((obj) => !!~this.errorNames.indexOf(obj.errorName)));
 
     const states = this.states.pipe(
@@ -55,7 +55,6 @@ export class NgxErrorDirective implements OnInit, OnDestroy, DoCheck {
       .subscribe(([states, errors]) => {
         this.hidden = !(states && errors.control.hasError(errors.errorName));
       });
-
   }
 
   public ngDoCheck() {
